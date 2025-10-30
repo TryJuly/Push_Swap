@@ -1,10 +1,9 @@
-#################################################################################################################
-#                                           VARIABLES SET                                                       #
-#################################################################################################################
-NAME = ./libft.a
+NAME = libft.a
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror -g
+
+FLAGS = -Wall -Wextra -Werror
+
 INCLUDES = libft.h
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -20,26 +19,22 @@ SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS = ${SRCS:.c=.o}
+
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
-OBJS_ALL = ${OBJS} ${OBJS_BONUS}
-#################################################################################################################
-#                                           RULES COMPILATION                                                   #
-#################################################################################################################
+
 all: ${NAME}
 
 ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-${OBJS_DIR}%.o: %.c ${INCLUDES}
+%.o: %.c ${INCLUDES}
 	${CC} ${FLAGS} -c $< -o $@
 
 bonus: ${OBJS} ${OBJS_BONUS}
-	ar rcs ${NAME} ${OBJS_ALL}
-#################################################################################################################
-#                                           RULES CLEAN DIRECTORY                                               #
-#################################################################################################################
+	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
+
 clean:
-	rm -rf ${OBJS_ALL}
+	rm -rf ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 	rm -rf ${NAME}

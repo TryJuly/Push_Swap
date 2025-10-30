@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 08:33:35 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/09 15:44:24 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/07 18:49:50 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*p_calloc;	
 	size_t	length;
 
-	if (!nmemb && !size)
-		return (malloc(0));
 	if (size && nmemb > SIZE_MAX / size)
 		return (NULL);
 	length = (nmemb * size);

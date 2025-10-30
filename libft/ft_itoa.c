@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 08:30:36 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/03 16:31:52 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/08 08:01:57 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,3 @@ char	*ft_itoa(int n)
 		p_itoa = ft_positive(p_itoa, count, n);
 	return (p_itoa);
 }
-
-// int	main(void)
-// {
-// 	printf(":%s:\n", ft_itoa(-2147483648));
-// 	printf(":%s:\n", ft_itoa(-42));
-// 	printf(":%s:\n", ft_itoa(0));
-// 	printf(":%s:\n", ft_itoa(123456));
-// 	printf(":%s:\n", ft_itoa(2147483647));
-// }

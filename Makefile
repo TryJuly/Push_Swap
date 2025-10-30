@@ -6,7 +6,7 @@ NAME = push_swap
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -g
 
-SRCS = ./main.c
+SRCS = ./main.c ./moove_stack.c
 
 INCLUDES = push_swap.h
 

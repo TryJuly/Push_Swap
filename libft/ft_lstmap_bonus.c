@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 16:20:08 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/29 11:27:54 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/08 08:03:35 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*p_add;
 	void	*content;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return ((void *)0);
 	p_new = ((void *)0);
 	while (lst)

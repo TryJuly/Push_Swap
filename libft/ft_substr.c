@@ -6,34 +6,42 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 07:50:59 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/29 14:03:55 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/03 17:30:32 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*ft_error(char *p_substr)
+{
+	p_substr = malloc(sizeof(char));
+	if (!p_substr)
+		return ((void *)0);
+	p_substr[0] = '\0';
+	return (p_substr);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	size_t	i;
-	size_t	slen;
+	char	*p_substr;
+	size_t	count;
 
-	if (!s)
-		return (NULL);
-	slen = ft_strlen(s);
-	if (start >= slen)
-		return (ft_strdup(""));
-	if (start + len > slen)
-		len = slen - start;
-	sub = malloc((len + 1) * sizeof(char));
-	if (!sub)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
+	p_substr = ((void *)0);
+	if ((!s) || start >= ft_strlen(s))
+		return (ft_error(p_substr));
+	count = 0;
+	if ((ft_strlen(s) - start) < len)
+		len = ft_strlen(s) - start;
+	p_substr = malloc((len + 1) * sizeof(char));
+	if (!p_substr)
+		return ((void *) 0);
+	while (len && s[start] && start != ft_strlen(s))
 	{
-		sub[i] = s[start + i];
-		i++;
+		p_substr[count] = s[start];
+		count++;
+		start++;
+		len--;
 	}
-	sub[i] = '\0';
-	return (sub);
+	p_substr[count] = '\0';
+	return (p_substr);
 }

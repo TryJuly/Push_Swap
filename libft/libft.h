@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 07:51:25 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/07 18:44:38 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/08 08:00:31 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

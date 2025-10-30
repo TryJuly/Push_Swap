@@ -6,13 +6,25 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 07:50:51 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/09 15:59:32 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/03 13:51:04 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_check(char const s1, char const *set);
+static size_t	ft_check(char const s1, char const *set)
+{
+	size_t	count;
+
+	count = 0;
+	while (set[count])
+	{
+		if (s1 == set[count])
+			return (1);
+		count++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -39,18 +51,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	p_str[count] = '\0';
 	return (p_str);
-}
-
-static size_t	ft_check(char const s1, char const *set)
-{
-	size_t	count;
-
-	count = 0;
-	while (set[count])
-	{
-		if (s1 == set[count])
-			return (1);
-		count++;
-	}
-	return (0);
 }
