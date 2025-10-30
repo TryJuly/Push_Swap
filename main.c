@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:54:27 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/30 15:47:13 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:52:01 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	main(void)
 		printf("nbr: %d, index: %d\n", tmp->nbr, tmp->index);
 		tmp = tmp->next;
 	}
-	stack_a = swap_a(stack_a);
+	swap_a(stack_a);
 	while (stack_a)
 	{
 		printf("nbr: %d, index: %d\n", stack_a->nbr, stack_a->index);

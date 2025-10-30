@@ -6,34 +6,36 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 12:08:25 by strieste          #+#    #+#             */
-/*   Updated: 2025/10/30 15:49:24 by strieste         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:56:44 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*swap_a(t_stack *top_a)
+void	swap_a(t_stack *top_a)
 {
-	t_stack	*temp;
+	t_stack	*temp_f;
+	t_stack	*temp_s;
 	
-	temp = top_a;
-	top_a = top_a->next;
-	temp->next = top_a->next;
-	top_a->next = temp;
+	temp_f = top_a;
+	temp_s = top_a->next;
+	top_a = temp_s;
+	temp_f = top_a->next;
+	top_a->next = temp_f;
 	printf("sa\n");
-	return (top_a);
 }
 
-t_stack	*swap_b(t_stack *top_b)
+void	swap_b(t_stack *top_b)
 {
-	t_stack	*temp;
+	t_stack	*temp_f;
+	t_stack	*temp_s;
 	
-	temp = top_b;
-	top_b = temp->next;
-	temp->next = top_b->next;
-	top_b->next = temp;
+	temp_f = top_b;
+	temp_s = top_b->next;
+	top_b = temp_s;
+	temp_f = top_b->next;
+	top_b->next = temp_f;
 	printf("sb\n");
-	return (top_b);
 }
 
 void	swap_swap(t_stack *top_a, t_stack *top_b)
