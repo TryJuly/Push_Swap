@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 08:30:55 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/04 10:40:03 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/08 10:00:16 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char const c)
 static char	**ft_free(char **array)
 {
 	size_t	count;
-	
+
 	count = 0;
 	while (array[count])
 	{

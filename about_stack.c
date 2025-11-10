@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 10:00:52 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/06 08:55:18 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/08 10:12:16 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ssize_t	stack_size(t_stack *stack)
 	size_t	length;
 
 	if (!stack)
-		return (-1);
+		return (0);
 	length = 0;
 	while (stack)
 	{
