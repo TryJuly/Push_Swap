@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:31:21 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/06 09:41:41 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:35:42 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,11 @@ long	ft_atol(const char *s)
 	while ((s[count] >= 9 && s[count] <= 13) || s[count] == 32)
 		count++;
 	if (s[count] == '-' || s[count] == '+')
+	{
+		if (s[count] == '-')
+			sign *= -1;
 		count++;
-	if (s[count - 1] == '-')
-		sign *= -1;
+	}
 	while (s[count] >= '0' && s[count] <= '9')
 	{
 		res = (res * 10) + (s[count] - 48);
@@ -73,8 +75,6 @@ void	fill_node(t_stack **stack, int nbr)
 	if (!*stack)
 	{
 		*stack = new_stack(nbr, 0);
-		if (!*stack)
-			return ;
 		return ;
 	}
 	new = new_stack(nbr, 0);

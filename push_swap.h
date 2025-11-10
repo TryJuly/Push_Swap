@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:56:49 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/08 10:08:28 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:04:36 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ void	full_elements(t_stack **top_a, t_stack **top_b);
 
 /*			Clean stack				*/
 
-int		ft_free_stack(t_stack **top_a, t_stack **top_b);
+int		ft_free_stack(t_stack **top_a, t_stack **top_b, int state);
+void	ft_free_one_stack(t_stack **stack);
 
 /*			Tools					*/
 

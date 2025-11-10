@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 09:01:14 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/06 10:16:38 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/10 09:37:22 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,12 @@ static size_t	ft_putnbr_unsigned_fd(unsigned int n, int fd)
 	size_t	count;
 
 	count = 0;
-	if (n >= 0 && n <= 9)
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
+	else if (n >= 1 && n <= 9)
 		count += putchar_fd(n + '0', fd);
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:03:32 by strieste          #+#    #+#             */
-/*   Updated: 2025/11/06 09:32:22 by strieste         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:13:42 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ t_stack	*fill_stack(int argc, char **argv)
 	while (argc >= 1)
 	{
 		if (!check_number(argv[argc]))
-			return (NULL);
+			return (ft_free_one_stack(&stack), NULL);
 		nbr = ft_atol(argv[argc]);
 		if (nbr < INT_MIN || nbr > INT_MAX)
-			return (NULL);
+			return (ft_free_one_stack(&stack), NULL);
 		if (!duplicate_nbr(stack, (int)nbr))
-			return (NULL);
+			return (ft_free_one_stack(&stack), NULL);
 		fill_node(&stack, (int)nbr);
 		argc--;
 	}
